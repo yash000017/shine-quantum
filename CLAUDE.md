@@ -11,7 +11,7 @@ Commands: `npm install`, `npm run dev`, `npm run build` (output in `dist/`).
 - `src/pages/`: Home, About, Services, ServiceDetail (`/services/:slug`), Industries, HowWeWork, Contact, BookMeeting, NotFound.
 - `src/components/`: Layout (navbar, footer), ui (Reveal, PageHero, CTABand), Faq, useForm.
 - `src/index.css`: Tailwind theme tokens and shared classes (blue and green light theme).
-- `public/_redirects` and `vercel.json`: SPA routing for Cloudflare Pages / Netlify and Vercel.
+- `wrangler.jsonc` (Cloudflare Workers static assets, SPA fallback) and `vercel.json` (Vercel). Do not add `public/_redirects`: a catch-all rule fails the Workers deploy.
 
 ## Status
 - Done: top contact bar (fixed), hero slider (2 images in `public/images`), logo carousel, About page team section, real email/phone/address, SQ logo (`public/logo.png`, favicon), footer shows ShineQuantum Global Solutions LLP.
@@ -20,7 +20,7 @@ Commands: `npm install`, `npm run dev`, `npm run build` (output in `dist/`).
 - Team photos, designations and bios in `site.js` (`team`) are demo content. Photos go in `public/team/`.
 - Hero stats on Home ("Up to 60%", "24/7", "US GAAP", "Data Security", "100%") are placeholders. No certifications or client numbers should be claimed unless real.
 - Privacy/Terms pages, page title and About intro still say "ShineQuantum Ltd".
-- Deploy target is Cloudflare Pages (direct upload of `dist/`).
+- Deploy target is Cloudflare Workers (git-connected build, `npx wrangler deploy` uploads `dist/`).
 
 ## Owner conventions to apply
 - No fake statistics, affiliations or offices.
