@@ -3,10 +3,12 @@ import { BookOpen, Calculator, Users, FileText, Landmark, BarChart3, Receipt, Br
 // Single source of truth for site content. Edit contact details and figures here.
 export const company = {
   name: 'ShineQuantum Ltd',
+  legalName: 'ShineQuantum Global Solutions LLP', // used in the footer copyright
   short: 'ShineQuantum',
-  email: 'hello@shinequantum.com',
-  phone: '+1 (000) 000-0000',
-  address: 'Replace with your registered office address',
+  email: 'info@shinequantumglobal.com',
+  linkedin: 'https://www.linkedin.com/company/shinequantum', // replace with the real company page URL
+  phone: '+1 (405) 234-1795',
+  address: '514, Nobles Trade Centre\nOpp. B D Rao Hall, Bhuyangdev Cross Road\nMemnagar, Ahmedabad – 380052, Gujarat, India',
   calendlyUrl: '', // e.g. 'https://calendly.com/your-handle/30min' to embed a live scheduler
   formEndpoint: '', // e.g. 'https://formspree.io/f/xxxxxxx' to receive form submissions
 }
@@ -76,6 +78,13 @@ export const benefits = [
   { title: 'Scalable Teams', text: 'Add or reduce capacity quickly for tax season, audits, or rapid growth.' },
   { title: 'Overlap With US Hours', text: 'Flexible shifts so your team is available during your working day.' },
   { title: 'Your Tools, Your Way', text: 'We work inside your software and workflows, so there is nothing new to learn.' },
+]
+
+// Leadership team. Replace the demo text and add a photo path (e.g. '/team/vipul-patel.jpg' in public/team/).
+export const team = [
+  { name: 'Vipul Patel', role: 'Designation', photo: '', bio: 'Demo bio. A short introduction will go here covering background, areas of expertise and the approach taken to serving clients.' },
+  { name: 'Shaipan Shah', role: 'Designation', photo: '', bio: 'Demo bio. A short introduction will go here covering background, areas of expertise and the approach taken to serving clients.' },
+  { name: 'Bhavesh Patel', role: 'Designation', photo: '', bio: 'Demo bio. A short introduction will go here covering background, areas of expertise and the approach taken to serving clients.' },
 ]
 
 export const values = [

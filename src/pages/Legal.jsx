@@ -16,7 +16,7 @@ function Doc({ eyebrow, title, intro, sections }) {
               <div className="mt-3 space-y-3 text-slate-600">{body.map((p, i) => <p key={i}>{p}</p>)}</div>
             </div>
           ))}
-          <p className="text-sm text-slate-500">Contact: {company.email} · {company.address}</p>
+          <p className="text-sm text-slate-500">Contact: {company.email} · {company.address.replace(/\n/g, ', ')}</p>
         </div>
       </section>
     </>

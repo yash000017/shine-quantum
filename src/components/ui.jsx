@@ -18,7 +18,7 @@ export const SectionTitle = ({ eyebrow, title, text, center = true, light = fals
 )
 
 export const PageHero = ({ eyebrow, title, text }) => (
-  <section className="hero-bg pt-36 pb-16 md:pb-20 relative overflow-hidden">
+  <section className="hero-bg pt-44 pb-16 md:pb-20 relative overflow-hidden">
     <div className="container-x text-center max-w-3xl">
       <motion.span initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="eyebrow">{eyebrow}</motion.span>
       <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .1 }} className="mt-5 text-4xl md:text-5xl leading-tight">{title}</motion.h1>

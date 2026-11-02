@@ -1,6 +1,6 @@
 import { Target, Eye, Heart } from 'lucide-react'
 import { PageHero, SectionTitle, Reveal, CTABand } from '../components/ui'
-import { values } from '../data/site'
+import { values, team } from '../data/site'
 
 export default function About() {
   return (
@@ -25,6 +25,34 @@ export default function About() {
               </div>
             </div>
           </Reveal>
+        </div>
+      </section>
+      <section className="section section-soft">
+        <div className="container-x">
+          <SectionTitle eyebrow="Our People" title="Meet the leadership team" text="The people who guide our work and stand behind every client relationship." />
+          <div className="space-y-16 md:space-y-24">
+            {team.map((m, i) => {
+              const initials = m.name.split(' ').map(w => w[0]).join('')
+              return (
+                <Reveal key={m.name}>
+                  <div className="grid md:grid-cols-5 gap-8 md:gap-14 items-center">
+                    <div className={`md:col-span-2 ${i % 2 === 1 ? 'md:order-2' : ''}`}>
+                      <div className="relative aspect-[4/5] max-w-sm mx-auto w-full rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                        {m.photo
+                          ? <img src={m.photo} alt={m.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+                          : <div className="absolute inset-0 dark-bg grid place-items-center text-white text-7xl font-display font-extralight" aria-label={`Photo of ${m.name} to be added`}>{initials}</div>}
+                      </div>
+                    </div>
+                    <div className={`md:col-span-3 ${i % 2 === 1 ? 'md:order-1 md:text-right' : ''}`}>
+                      <span className="eyebrow">{m.role}</span>
+                      <h3 className="mt-4 text-3xl md:text-4xl">{m.name}</h3>
+                      <p className={`mt-5 text-lg text-slate-600 max-w-xl ${i % 2 === 1 ? 'md:ml-auto' : ''}`}>{m.bio}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              )
+            })}
+          </div>
         </div>
       </section>
       <section className="section section-tint">
